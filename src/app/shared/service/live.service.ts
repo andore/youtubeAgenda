@@ -8,7 +8,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
   providedIn: 'root'
 })
 export class LiveService {
-  apiUrl = 'http://192.168.15.17:8080/lives'
+  apiUrl = 'https://akm-youtubeagenda-server.herokuapp.com/lives'
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

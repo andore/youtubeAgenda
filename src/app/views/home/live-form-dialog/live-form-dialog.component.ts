@@ -34,6 +34,7 @@ export class LiveFormDialogComponent implements OnInit {
     console.log("data formatada:" + this.liveForm.value.liveDate);
     this.comunicador.postLives(this.liveForm.value).subscribe(r => {
       console.log(r);
+      window.location.reload();
     })
     this.dialogRef.close();
     this.liveForm.reset();

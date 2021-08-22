@@ -8,7 +8,6 @@
                     <mat-card-title class="mat-card-title-live">
                         <div class="row">
                             <p>
-                                <span style="font-size: 0.9rem;" fxFlex="70" fxLayoutAlign="start center">{{live.liveName}}</span>
                                 <span fxFlex></span>
                                 <mat-chip class="mat-chip-date" fxFlex="25" fxLayoutAlign="center center">
                                     <span style="font-size: 0.7rem;">{{live.liveDate | localDateTime}}</span>
@@ -24,6 +23,12 @@
                     <mat-card-content flexLayoutAlign="center center">
                         <div>
                             <iframe width="560" height="315" [src]="live.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div>
+                            <span fxFlex></span>
+                            <span style="font-size: 0.9rem;" fxFlex="70" fxLayoutAlign="end center">
+                                <button mat-raised-button (click)="deleteLive(live.id)"><mat-icon>delete</mat-icon>Apagar</button>
+                            </span>
                         </div>
                     </mat-card-content>
                 </mat-card>
@@ -55,6 +60,12 @@
                     <mat-card-content flexLayoutAlign="center center">
                         <div>
                             <iframe width="560" height="315" [src]="live.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div>
+                            <span fxFlex></span>
+                            <span style="font-size: 0.9rem;" fxFlex="70" fxLayoutAlign="end center">
+                                <button mat-raised-button (click)="deleteLive(live.id)"><mat-icon>delete</mat-icon>Apagar</button>
+                            </span>
                         </div>
                     </mat-card-content>
                 </mat-card>

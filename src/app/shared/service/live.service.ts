@@ -9,6 +9,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
 })
 export class LiveService {
   apiUrl = 'https://akm-youtubeagenda-server.herokuapp.com/lives'
+  //apiUrl = 'http://localhost:8080/lives'
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -26,5 +27,9 @@ export class LiveService {
 
   public postLives(live: any): Observable<Live>{
     return this.httpClient.post<any>(this.apiUrl, live, this.httpOptions);
+  }
+
+  public deleteLives(id: string): Observable<any>{
+    return this.httpClient.delete(this.apiUrl + "/" + id);
   }
 }

@@ -39,4 +39,12 @@ export class LiveListComponent implements OnInit {
       });
     })
   }
+
+  deleteLive(id: string){
+    console.log("Apagar:" + id);
+    this.liveService.deleteLives(id).subscribe(result => {
+      console.log(result);  
+      window.location.reload();
+    });
+  }
 }

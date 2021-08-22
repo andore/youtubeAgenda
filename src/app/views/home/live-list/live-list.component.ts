@@ -44,7 +44,7 @@ export class LiveListComponent implements OnInit {
     console.log("Apagar:" + id);
     this.liveService.deleteLives(id).subscribe(result => {
       console.log(result);  
-      //window.location.reload();
+      window.location.reload();
     });
   }
 }
